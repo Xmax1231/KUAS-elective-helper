@@ -34,8 +34,8 @@ function update() {
 	var selectrows = document.getElementsByClassName("x-grid3-row-selected");
 	for (var i = selectrows.length - 1; i >= 0; i--) {
 		var cla = selectrows[i].children[0].children[0].children[0];
-		var name = cla.children[2].innerText.trim();
-		var timestr = cla.children[10].children[0].innerText;
+		var name = cla.children[4].innerText.trim();
+		var timestr = cla.children[13].children[0].innerText;
 		var time = timestr.match(/\((.)\)(\d)-(\d)/);
 		var timed = +day.indexOf(time[1])+2;
 		var times = +time[2];
@@ -58,7 +58,7 @@ function update() {
 				console.log("break");
 				break;
 			}
-			var timestr = allrows[j].children[0].children[0].children[0].children[10].children[0].innerText;
+			var timestr = allrows[j].children[0].children[0].children[0].children[13].children[0].innerText;
 			var time = timestr.match(/\((.)\)(\d)-(\d)/);
 			if (time === null) {
 				continue;

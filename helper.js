@@ -79,6 +79,9 @@ function update() {
 	}
 }
 init();
-document.body.addEventListener("click", update);
+if (window.isBindListener === undefined) {
+	document.body.addEventListener("click", update);
+	window.isBindListener = true;
+}
 
 })();
